@@ -20,6 +20,7 @@ RAW_RESPONSE = """
     "title":"Save Decimal with SQLAlchemy"}],"has_more":false,"quota_max":300,"quota_remaining":241}
 """
 
+
 @pytest.fixture
 def patched_good_request(monkeypatch):
     def mocked_get(url, *args, **kwargs):
