@@ -28,4 +28,3 @@ jobs:
       run: |
         pip install pytest
         cd stackify-core-tests/; PYTHONPATH=.:../stackify-core pytest unit
-        PYTHONPATH=.:../stackify-core pytest funtest

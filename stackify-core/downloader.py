@@ -42,7 +42,7 @@ def _fetch_one_site(site: str, from_time: int) -> Tuple[List[Question], int]:
     while True:
         response = requests.get(url=url_template(page))
         if response.status_code != 200:
-            raise DownloadQuestionsError(status_code = response.status_code)
+            raise DownloadQuestionsError(status_code=response.status_code)
 
         json_data = json.loads(response.text)
         result += [_convert_question(question, site) for question in json_data["items"]]
@@ -55,7 +55,7 @@ def _fetch_one_site(site: str, from_time: int) -> Tuple[List[Question], int]:
 
 def fetch(from_time: int, sites: List[str] = None) -> Result:
     sites = sites if sites else SITES
-    current_moment = int(time.time()) # TODO: use arrow instead?
+    current_moment = int(time.time())  # TODO: use arrow instead?
     quota = 0
     result = []
 
