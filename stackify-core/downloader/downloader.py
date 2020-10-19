@@ -6,8 +6,8 @@ from typing import Tuple
 
 import requests
 
-from exceptions import DownloadQuestionsError
-from model import Question
+from downloader.exceptions import DownloadQuestionsError
+from models.questions import Question
 
 # TODO: formatted string
 URL_TEMPLATE = "https://api.stackexchange.com/2.2/questions?pagesize=100&page={}&fromdate={}&order=desc&sort=creation&site={}&key={}"
