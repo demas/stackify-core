@@ -2,8 +2,8 @@ from unittest import mock
 
 import pytest
 
-import downloader
-from exceptions import DownloadQuestionsError
+from downloader import downloader
+from downloader.exceptions import DownloadQuestionsError
 
 
 def test_make_url():
