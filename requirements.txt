@@ -2,3 +2,5 @@ requests
 schematics
 pytest
 betterconf
+psycopg2-binary
+pypika
